@@ -8,5 +8,8 @@ public class WithAnnotations {
                 new ClassPathXmlApplicationContext("applicationContext3.xml");
         Person person = context.getBean("personBean", Person.class);
         person.callYourPet();
+        System.out.println(person.getSurName());
+        System.out.println(person.getAge());
+        context.close();
     }
 }
