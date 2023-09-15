@@ -1,11 +1,11 @@
-package com.dimatokarev.spring.spring_introdaction;
+package com.dimatokarev.spring.spring_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("personBean")
+//@Component("personBean")
 public class Person {
     /*@Autowired
     @Qualifier("dog")*/
@@ -15,8 +15,8 @@ public class Person {
     @Value("${person.age}")
     private int age;
 
-    @Autowired
-    public Person(@Qualifier("catBean") Pet pet) {
+//    @Autowired
+    public Person(Pet pet) {
         this.pet = pet;
     }
 

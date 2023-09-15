@@ -1,4 +1,4 @@
-package com.dimatokarev.spring.spring_introdaction;
+package com.dimatokarev.spring.spring_introduction;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

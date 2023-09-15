@@ -1,18 +1,13 @@
-package com.dimatokarev.spring.spring_introdaction;
+package com.dimatokarev.spring.spring_introduction;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Test3 {
+public class Test2 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
-
-        Person myPerson = context.getBean("myPerson", Person.class);
-
-        myPerson.callYourPet();
-        System.out.println(myPerson.getSurName() + " " + myPerson.getAge());
-
+        Pet pet = context.getBean("myPet", Pet.class);
+        pet.say();
         context.close();
-
     }
 }

@@ -1,4 +1,4 @@
-package com.dimatokarev.spring.spring_introdaction;
+package com.dimatokarev.spring.spring_introduction;
 
 public class Test1 {
     public static void main(String[] args) {
