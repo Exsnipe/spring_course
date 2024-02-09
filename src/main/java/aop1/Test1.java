@@ -1,16 +1,19 @@
-package com.dimatokarev.spring.spring_introduction;
+package aop1;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Test6 {
+public class Test1 {
+
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
-        Person person = context.getBean("myPerson", Person.class);
-        person.callYourPet();
-        System.out.println(person.getAge());
+        UniLibrary library = context.getBean("uniLibrary", UniLibrary.class);
+        Book book = context.getBean("book", Book.class);
+        library.addBook("Fedya", book);
+        library.addMagazine();
 
         context.close();
     }
+
 }

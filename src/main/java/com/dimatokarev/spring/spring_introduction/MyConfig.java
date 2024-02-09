@@ -1,27 +1,19 @@
 package com.dimatokarev.spring.spring_introduction;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @PropertySource("classpath:myApp.properties")
 public class MyConfig {
 
     @Bean
-    @Scope("prototype")
-    public Pet catBean() {
+    public Pet myCat() {
         return new Cat();
     }
 
     @Bean
-    public Person personBean() {
-        return new Person(dogBean());
+    public Person myPerson() {
+        return new Person(myCat());
     }
 
-    @Bean
-    public Pet dogBean() {
-        return new Dog();
-    }
 }

@@ -1,6 +1,11 @@
 package com.dimatokarev.spring.spring_introduction;
 
-//@Component
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+
+
+
 public class Dog implements Pet {
 
     public Dog() {

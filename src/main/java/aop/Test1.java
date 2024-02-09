@@ -4,15 +4,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class Test1 {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(myConfig.class);
+        AnnotationConfigApplicationContext context
+                = new AnnotationConfigApplicationContext(MyConfig.class);
 
-        UniversityLibrary uniLib = context.getBean("universityLibrary", UniversityLibrary.class);
-        Book book = context.getBean("book", Book.class);
-        uniLib.getBook(book);
-//        SchoolLibrary schoolLib = context.getBean("schoolLibrary", SchoolLibrary.class);
-//        uniLib.returnBook();
-//        schoolLib.getBook();
+        SchoolLibrary library = context.getBean("schoolLibrary", SchoolLibrary.class);
+        library.getBook();
 
         context.close();
     }
