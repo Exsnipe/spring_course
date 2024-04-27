@@ -20,7 +20,7 @@ public class University {
 
     public List<Student> getStudents() {
         System.out.println("Information from method getStudemts");
-        System.out.println(students.get(1));
+        System.out.println(students.get(3));
         System.out.println(students);
         return students;
     }

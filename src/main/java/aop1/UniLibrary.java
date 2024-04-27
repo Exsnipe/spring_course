@@ -11,6 +11,7 @@ public class UniLibrary {
     }
     public String returnBook() {
         System.out.println("We return \"Tender is the night\"  to the UniLibrary");
+        int er = 10 / 0;
         System.out.println("---------------------------------");
         return "\"Tender is the night\"";
     }
